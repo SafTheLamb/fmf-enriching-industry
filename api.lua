@@ -46,6 +46,7 @@ if not EnrichingIndustry then
 			image_icon_ingredient = item_name_or_path_ingredient
 		end
 		local image_icon_product, item_product
+		local icon_product_size = 64
 		if product_is_fluid then
 			item_product = data.raw.fluid[item_name_or_path_product]
 		else
@@ -58,13 +59,14 @@ if not EnrichingIndustry then
 -- 				return icons
 -- 			else
 				image_icon_product = item_product.icon
+				icon_product_size = item_product.icon_size or 64
 --			end
 		else
 			image_icon_product = item_name_or_path_product
 		end
 		return {
 			{icon=image_icon_ingredient, shift={-12, -12}, scale=0.4},
-			{icon=image_icon_product, draw_background=true}
+			{icon=image_icon_product, draw_background=true, icon_size=icon_product_size, scale=32/icon_product_size}
 		}
 	end
 

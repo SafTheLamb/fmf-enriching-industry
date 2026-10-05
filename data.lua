@@ -7,5 +7,5 @@ require("prototypes.technology")
 
 require("prototypes.base-recipe-changes")
 
---require("prototypes.compat.bz")
+require("prototypes.compat.bz")
 --require("prototypes.compat.molten-tungsten")
